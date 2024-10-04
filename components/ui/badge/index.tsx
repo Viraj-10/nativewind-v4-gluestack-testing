@@ -172,7 +172,7 @@ type IBadgeProps = React.ComponentPropsWithoutRef<typeof ContextView> &
   VariantProps<typeof badgeStyle>;
 const Badge = ({
   children,
-  action = 'muted',
+  action = 'info',
   variant = 'solid',
   size = 'md',
   className,
@@ -180,6 +180,7 @@ const Badge = ({
 }: { className?: string } & IBadgeProps) => {
   return (
     <ContextView
+      // @ts-expect-error
       className={badgeStyle({ action, variant, class: className })}
       {...props}
       context={{
@@ -204,6 +205,7 @@ const BadgeText = React.forwardRef<
   return (
     <Text
       ref={ref}
+      // @ts-expect-error
       className={badgeTextStyle({
         parentVariants: {
           size: parentSize,
