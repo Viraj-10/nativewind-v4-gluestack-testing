@@ -6,7 +6,8 @@
     "start": "expo start",
     "android": "DARK_MODE=media expo start --android",
     "ios": "DARK_MODE=media expo start --ios",
-    "web": "DARK_MODE=media expo start --web"
+    "web": "DARK_MODE=media expo start --web",
+    "check-typescript": "tsc --noEmit --project tsconfig.json"
   },
   "dependencies": {
     "@expo/html-elements": "^0.4.2",
